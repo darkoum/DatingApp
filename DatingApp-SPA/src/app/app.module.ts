@@ -10,6 +10,9 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ErrorInterceptorProvider } from './_services/error.interseptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// or
+import { BsDropdownModule } from 'ngx-bootstrap';
 @NgModule({
    declarations: [
       AppComponent,
@@ -20,7 +23,9 @@ import { ErrorInterceptorProvider } from './_services/error.interseptor';
    imports: [
       BrowserModule,
       HttpClientModule,
-      FormsModule
+      FormsModule,
+      BrowserAnimationsModule,
+      BsDropdownModule.forRoot()
    ],
    providers: [
       ErrorInterceptorProvider
